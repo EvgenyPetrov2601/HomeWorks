@@ -1,6 +1,6 @@
-﻿//double eps = double.Parse(Console.ReadLine());
-//Console.WriteLine(Pi(eps));
-//Console.WriteLine(Math.PI);
+﻿double eps = double.Parse(Console.ReadLine());
+Console.WriteLine(Pi(eps));
+Console.WriteLine(Math.PI);
 static double Pi(double eps)
 {
     double pi = Math.PI;
