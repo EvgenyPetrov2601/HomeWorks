@@ -19,7 +19,6 @@ for (int i = 0; i < matrHeight; i++)
     Console.WriteLine();
 }
 string result = "Симметричная матрица";
-
 if (matrLenght != matrHeight)
 {
     Console.WriteLine("Неверная матрица");
