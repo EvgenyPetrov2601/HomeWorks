@@ -42,7 +42,7 @@ static double Trapezoid(double down, double top, double sectionCount)
     }
     return result;
 }
-static double Simpson(double down, double top, double sectionCount) 
+static double Simpson(double down, double top, double sectionCount)
 {
     double result1 = 0, result2 = 0, result = 0;
     double lenght = (top - down) / sectionCount;
@@ -50,8 +50,8 @@ static double Simpson(double down, double top, double sectionCount)
     {
         if (i % 2 == 0)
             result1 += Func(down + i * lenght);
-        else 
-            result2 += Func(down + i * lenght); 
+        else
+            result2 += Func(down + i * lenght);
     }
     result = lenght / 3 * (Func(down) + Func(top) + 4 * result1 + 2 * result2);
     return result;
