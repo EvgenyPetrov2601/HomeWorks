@@ -8,8 +8,8 @@ namespace ControlWork2
         {
             Matrix matr = new Matrix("Matrix.txt");
             Console.WriteLine(matr);
-            matr.ReplaceValues(matr);
-            Console.WriteLine(matr);
+            var matr1 = new Matrix(matr);
+            Console.WriteLine(matr1);
 
         }
     }

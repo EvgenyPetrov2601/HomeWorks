@@ -70,15 +70,29 @@ namespace MatrixControl
                 {
                     if ((j + i + 1) == matrix.Columns)
                     {
-                        matrix[i,i] = matrix[i, j];
+                        matrix[i,matrix.columns-i] = matrix[i, j];
                     }
                     else
                     {
-                        
+                        (matrix[i, j + 1], matrix[i, j]) = (matrix[i,j], matrix[i,j+1]);    
                     }
                 }
             }
             return matrix;
+        }
+        public Matrix(Matrix a)
+        {
+            rows = a.Rows; columns = a.Columns;
+            matrix = new int[rows, columns];
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (j - i - 1 < 0) { matrix[i, j] = a[i, (j - i - 1) + columns]; }
+                    else { matrix[i, j] = a[i, j - i - 1]; }
+
+                }
+            }
         }
 
         public override string ToString()
