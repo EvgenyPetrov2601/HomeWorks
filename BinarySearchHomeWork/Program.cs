@@ -1,7 +1,6 @@
 ﻿
 static int BinarySearch(int[] array, int searchedValue, int left, int right)
 {
-
     while (left <= right)
     {
         var middle = (left + right) / 2;
@@ -23,4 +22,4 @@ static int BinarySearch(int[] array, int searchedValue, int left, int right)
 }
 var array = new int[] { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 };
 var n = int.Parse(Console.ReadLine());
-Console.WriteLine($"index = {BinarySearch(array, n, 0, array.Length)}");
+Console.WriteLine($"index = {BinarySearch(array, n, 0, array.Length-1)}");
